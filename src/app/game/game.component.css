@@ -1,0 +1,136 @@
+@import url('https://fonts.googleapis.com/css?family=Lilita+One&display=swap');
+
+*{
+    font-family: 'Lilita One', cursive;
+}
+img{
+    height:10vh;
+    widows: 20vw;
+}
+.card{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    /* height: 14vh; */
+    /* width: 20vw; */
+   background-color: goldenrod;
+   position: relative;
+   top: 0px;
+   border-radius: 15px;
+}
+.board{
+
+    display: grid;
+    grid-template-columns: auto auto auto auto;
+    height: 87vh;
+    width: 95vw;
+    grid-row-gap: 3px;
+    grid-column-gap: 3px;
+    top: 2px;
+    position: fixed;
+    /* margin-left: 5vw;
+    margin-right: 5vw; */
+    margin: auto;
+}
+.game{
+    left: 0;
+    top:0;
+    position: fixed;
+    width: 100vw;
+    height: 100vh;
+    display:flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-image: linear-gradient(white,rgb(0, 162, 255));
+
+}
+.view{
+    background-image: linear-gradient(white,rgb(0, 162, 255));
+}
+.select{
+    background-color: red;
+    opacity: .5;
+}
+
+.target{
+    position: fixed;
+    top: 0px;
+    left: 0px;
+    height:100vh;
+    width: 100vw;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-image: linear-gradient(white,rgb(0, 162, 255));
+}
+.target .person{
+    height: 80vw;
+    border: goldenrod;
+    border-width: 5px;
+    border-style: solid;
+} 
+.person{
+    margin: 10px;
+    margin-bottom: 20px;
+}
+.mini{
+    /* position: absolute; */
+    display: flex;
+    flex: 1;
+    margin-top: 10px;;
+    /* bottom: 1vh; */
+
+}
+.img{
+    padding-left: 4px;
+    padding-right: 4px;
+}
+.footer{
+display: flex;
+position: fixed;
+bottom: 0px;
+flex-direction: row;
+width: 100vw;
+height: 12vh;
+align-items: center;
+
+/* padding-left: 10px;
+padding-right: 10px; */
+background-color: rgb(192, 192, 192);
+
+}
+button{
+    font-size: 20px;;
+    height: 46px;
+    width: 86px;
+    background-color: goldenrod;
+    border-radius: 20px;
+    margin-right: 10px;
+}
+
+@media only screen and (min-width: 768px) {
+    .board{
+        grid-template-columns: auto auto auto auto auto auto;
+        grid-row-gap: 0px;
+        grid-column-gap: 5vw;
+        height: 80vh;
+        top: 30px;
+
+    }
+    .card{
+        height: 15vh;
+    }
+    img{
+        padding-top: 0px;
+    }
+    .mini{
+        
+        bottom: 20px;
+
+    }
+
+}
+
