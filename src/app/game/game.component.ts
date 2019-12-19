@@ -14,7 +14,7 @@ ppl:any = [];
 person:any;
   ngOnInit() {
     let people = this.gameservice.sendPeople();
-    this.person = people[Math.floor(Math.random() * 25)]
+    this.person = people[Math.floor(Math.random() * 24)]
     console.log(this.person)
     people.forEach(prsn => { 
       this.ppl.push(prsn)
