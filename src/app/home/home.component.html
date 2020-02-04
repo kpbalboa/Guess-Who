@@ -1,7 +1,26 @@
 
-<div>
+<div class="home">
 <img src="../../assets/photos/logo.png"/>
 
+<div class='menu'>
 <a routerLink="active" routerLink='/game'>Start Game</a>
-
+<form
+  id="Search"
+  #form="ngForm"
+  (ngSubmit)="
+    Getpeople(
+      form.value.title
+    )
+  "
+>
+ <input
+id="filterInput"
+type="text"
+name="title"
+placeholder="title"
+ngModel
+/>
+<button>Search</button>
+</form>
+</div>
 </div>

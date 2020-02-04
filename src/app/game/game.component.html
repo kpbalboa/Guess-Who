@@ -1,16 +1,21 @@
 <div class="game">
 <div class="board">
 <div *ngFor='let person of ppl' class="card" (click)="activate($event)">
-    <img src={{person.source}} class="img">
-    <div>{{person.name}}</div>
+    <div class=vert>{{person.character}}</div>
+    <img src=
+    "{{person.source}}" class="img">
+    <div class=vert>{{person.name}}</div>
 </div>
 </div>
 <div class="footer">
 <div class="target" (click)="minimize($event)"> 
-    <p></p>  
-<img src={{this.person.source}} class="person"/>
+    <p></p>
+<img src="{{this.person.source}}" class="person"/>
+<div>
 <h1>{{this.person.name}}</h1>
+<h2>{{this.person.character}}</h2>
 </div>
-<button (click)="reset()">Reset</button>
+</div>
+<a class=home routerLink="/home">Home</a>
 </div>
 </div>

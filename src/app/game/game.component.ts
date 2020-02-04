@@ -14,14 +14,13 @@ ppl:any = [];
 person:any;
   ngOnInit() {
     let people = this.gameservice.sendPeople();
-    this.person = people[Math.floor(Math.random() * 24)]
-    console.log(this.person)
+    this.person = people[Math.floor(Math.random() * 20)]
+  
     people.forEach(prsn => { 
       this.ppl.push(prsn)
     });
   }
   activate(e){
-    console.log(e)
     if(e.target.classList[0]== "card"){
       if (e.target.classList[1] == undefined) {
         e.target.classList.add('select')
@@ -33,11 +32,11 @@ person:any;
     }else{
     if (e.target.parentElement.classList[1] == undefined) {
       e.target.parentElement.classList.add('select')
-      console.log(e.target.parentElement.classList[1])
+      // console.log(e.target.parentElement.classList[1])
     }
     else{
       e.target.parentElement.classList.remove('select')
-      console.log(e.target.parentElement.classList[1])
+      // console.log(e.target.parentElement.classList[1])
     }
   }
   }
@@ -54,7 +53,7 @@ person:any;
       e.target.parentElement.classList.add('target')
     }
   }else{
-    if (e.target.classList[0] == "target") {
+    if (e.target.classList[0] == "target"){
       e.target.classList.remove('target')
       e.target.classList.add('mini')
     }
