@@ -40,7 +40,7 @@ people= [
 characters=[];
 pictures=[]
 movie;
-fetchMovie(searchTerm: string): Observable<any> {
+fetchMovie(searchTerm) {
   let movies= this.http
     .get(`https://api.themoviedb.org/3/search/movie?api_key=15e5712ff47e4688d1f70d94261a6c5d&query=${searchTerm}
 `).toPromise()
